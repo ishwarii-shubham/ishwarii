@@ -2111,7 +2111,7 @@ p.tun {
     width: 39%;
 }
 }
-@media(max-width:991px){
+@media(max-width:779px){
 .h_menu4 {
   width: 100%;
 }
@@ -2291,7 +2291,7 @@ a.cpns {
     right: 250px;
 }
 }
-@media(max-width:768px){
+@media(max-width:780px){
 .h_menu4 {
   width: 100%;
 }
@@ -2940,7 +2940,7 @@ a.item_add p.number {
     width: 100%;
 }
 }
-@media only screen and (max-width: 996px) {
+@media only screen and (max-width: 779px) {
     .logo {
         display: none;
     }
@@ -2948,7 +2948,7 @@ a.item_add p.number {
 			float:left;
 		}
 }
-@media only screen and (min-width: 996px) {
+@media only screen and (min-width: 780px) {
     .ca-r {
         display: none;
     }
