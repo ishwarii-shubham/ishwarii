@@ -103,6 +103,7 @@ a.item_add {
 }
 .logo{
 	float: left;
+	margin-top: 2%;
 	position: absolute;
   z-index: 1;
 }
