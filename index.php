@@ -96,51 +96,6 @@
 						<h2>Our Story</h2>
 						<div class="col-md-6 men">
 							<img class="img-responsive" src='images1/our-story.jpg'>
-							<!-- <div id="story-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false">
-
-								<ol class="carousel-indicators">
-									<li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-									<li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-									<li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-								</ol>
-
-								<div class="carousel-inner" role="listbox">
-
-									<div class="item active">
-
-										<img src="images1/banner/slide1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
-										<div class="bs-slider-overlay"></div>
-
-									</div>
-
-
-									<div class="item active">
-
-										<img src="images1/banner/slide1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
-										<div class="bs-slider-overlay"></div>
-
-									</div>
-
-
-									<div class="item active">
-
-										<img src="images1/banner/slide1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
-										<div class="bs-slider-overlay"></div>
-
-									</div>
-
-								</div>
-								<a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
-									<span class="fa fa-angle-left" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-
-
-								<a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
-									<span class="fa fa-angle-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
-							</div> -->
 						</div>
 						<div class="col-md-6">
 							<div class = 'our-story'>
@@ -216,6 +171,92 @@
 							<div class="clearfix"> </div>
 						</div>
 					</div>
+
+					<!-- Feedback -->
+					<div class="content-top-bottom" style = "margin-top: 10px; margin-bottom: 10px; margin-right: -5%; margin-left: -5%;">
+						<section>
+							<div class="customer-feedback">
+								<div class="container text-center">
+									<div class="row">
+										<div class="col-sm-offset-2 col-sm-8">
+											<div>
+												<h2 class="section-title">What Clients Say</h2>
+											</div>
+										</div><!-- /End col -->
+									</div><!-- /End row -->
+
+									<div class="row">
+										<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+											<div class="owl-carousel feedback-slider">
+
+												<!-- slider item -->
+												<div class="feedback-slider-item">
+													<img src="//c2.staticflickr.com/8/7310/buddyicons/24846422@N06_r.jpg" style = "width:auto;" class="center-block img-circle" alt="Customer Feedback">
+													<h3 class="customer-name">Lisa Redfern</h3>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+													<span class="light-bg customer-rating" data-rating="5">
+														5
+														<i class="fa fa-star"></i>
+													</span>
+												</div>
+												<!-- /slider item -->
+
+												<!-- slider item -->
+												<div class="feedback-slider-item">
+													<img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg" style = "width:auto;" class="center-block img-circle" alt="Customer Feedback">
+													<h3 class="customer-name">Cassi</h3>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+													<span class="light-bg customer-rating" data-rating="4">
+														4
+														<i class="fa fa-star"></i>
+													</span>
+												</div>
+												<!-- /slider item -->
+
+												<!-- slider item -->
+												<div class="feedback-slider-item">
+													<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg" style = "width:auto;" class="center-block img-circle" alt="Customer Feedback">
+													<h3 class="customer-name">Md Nahidul</h3>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+													<span class="light-bg customer-rating" data-rating="5">
+														5
+														<i class="fa fa-star"></i>
+													</span>
+												</div>
+												<!-- /slider item -->
+
+											</div><!-- /End feedback-slider -->
+
+											<!-- side thumbnail -->
+											<div class="feedback-slider-thumb hidden-xs">
+												<div class="thumb-prev">
+													<span>
+														<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg" alt="Customer Feedback">
+													</span>
+													<span class="light-bg customer-rating">
+														5
+														<i class="fa fa-star"></i>
+													</span>
+												</div>
+
+												<div class="thumb-next">
+													<span>
+														<img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg" alt="Customer Feedback">
+													</span>
+													<span class="light-bg customer-rating">
+														4
+														<i class="fa fa-star"></i>
+													</span>
+												</div>
+											</div>
+											<!-- /side thumbnail -->
+
+										</div><!-- /End col -->
+									</div><!-- /End row -->
+								</div><!-- /End container -->
+							</div><!-- /End customer-feedback -->
+						</section>
+					</div>
 				</div>
 				<!----->
 			</div>
@@ -235,6 +276,9 @@
 				cycle: true
 				});
 		</script>
+
+		<script src="js/feedback.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
 
 		<?php include('assets/footer.php'); ?>
 

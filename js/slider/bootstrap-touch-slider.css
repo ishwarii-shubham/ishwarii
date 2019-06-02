@@ -205,11 +205,11 @@
     position: absolute;
     text-align: left;
     padding: 10px 85px;
-    
+
 }
 
 .slide-text > h1 {
-    
+
     padding: 0;
     color: #ffffff;
     font-size: 70px;
@@ -322,7 +322,7 @@
     }
 
 }
-@media  (max-width: 480px) {
+@media  (max-width: 660px) {
     .slide-text {
         padding: 10px 30px;
     }
@@ -336,7 +336,7 @@
         line-height: 18px;
         margin-bottom: 10px;
     }
-    .slide-text > a.btn-default, 
+    .slide-text > a.btn-default,
     .slide-text > a.btn-primary {
         font-size: 10px;
         line-height: 10px;
