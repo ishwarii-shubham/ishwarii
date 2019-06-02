@@ -423,7 +423,7 @@ height: 35px;
 	background-color: #000;
   /*border-radius: 10px;*/
 	text-align:center;
-	padding:4em 0;
+	padding:1em 1em;
 }
 .grid-top img{
 	width:100%;
@@ -2113,6 +2113,7 @@ p.tun {
     width: 39%;
 }
 }
+
 @media(max-width:768px){
 .logo{
   display: none;
@@ -2129,7 +2130,7 @@ p.tun {
 }
 .grid-top {
     float: left;
-    width: 25%;
+    width: 50%;
 }
 .grid-mid {
   float: left;
@@ -2417,8 +2418,8 @@ ul.callbacks_tabs.callbacks1_tabs {
     padding: 5em 0 1em;
 }
 .grid-top {
-  width: 100%;
-    margin-bottom: 1em;
+  width: 50%;
+  margin-bottom: 1em;
 }
 .grid-top p {
   font-size: 1.2em;
@@ -2507,7 +2508,7 @@ a.item_add p.number {
   font-size: 1.2em;
 }
 .cont {
-    min-height: 214em;
+    /*min-height: 214em;*/
 }
 .amet-sed {
     width: 50%;
@@ -2566,22 +2567,22 @@ a.item_add p.number {
 }
 @media(max-width:480px){
 .cont {
-    min-height: 178em;
+    /*min-height: 178em;*/
 }
 }
 @media(max-width:414px){
 .cont {
-    min-height: 151em;
+    /*min-height: 151em;*/
 }
 }
 @media(max-width:384px){
 .cont {
-    min-height: 139em;
+    /*min-height: 139em;*/
 }
 }
 @media(max-width:375px){
 .cont {
-    min-height: 136em;
+    /*min-height: 136em;*/
 }
 }
 @media(max-width:320px){
