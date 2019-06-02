@@ -2211,7 +2211,7 @@ width:33.3%;
     margin: 6em 0 0;
 }
 .single-top {
-  width:52%;
+  width:100%;
 }
 .single-para h4 {
   font-size: 2em;
@@ -3659,4 +3659,14 @@ Testimonail See All Main components
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+
+@media only screen and (max-width: 768px) {
+	.imagezoom-view {
+		display: none;
+	}
+	.imagezoom-cursor{
+		display: none;
+	}
 }
