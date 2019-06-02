@@ -24,9 +24,9 @@
 						<div class="cd-tab-filter-wrapper">
 							<div class="cd-tab-filter">
 								<ul class="cd-filters">
-									<li class="placeholder"> 
+									<li class="placeholder">
 										<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
-									</li> 
+									</li>
 									<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
 									<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Best Seller</a></li>
 									<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">New</a></li>
@@ -185,7 +185,7 @@
 							<form>
 								<div class="cd-filter-block">
 									<h4>Search</h4>
-									
+
 									<div class="cd-filter-content">
 										<input type="search" placeholder="Try ghee...">
 									</div> <!-- cd-filter-content -->
@@ -214,7 +214,7 @@
 
 								<div class="cd-filter-block">
 									<h4>Quantity</h4>
-									
+
 									<div class="cd-filter-content" style="color:black;">
 										<div class="cd-select cd-filters">
 											<select class="filter" name="selectThis" id="selectThis">
@@ -261,7 +261,7 @@
 		</div>
 	</div>
 	<?php include('assets/footer.php'); ?>
-	<script src="js/jquery-2.1.1.js"></script>
+	<!-- <script src="js/jquery-2.1.1.js"></script> -->
 	<script src="js/jquery.mixitup.min.js"></script>
 	<script src="js/main-product.js"></script> <!-- Resource jQuery -->
 

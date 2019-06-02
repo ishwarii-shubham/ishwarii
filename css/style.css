@@ -1174,7 +1174,7 @@ p.tun {
     font-size: 1em;
     color: white;
     text-align: left;
-    line-height: 1.8em;
+    line-height: 0.8em;
     padding: 1em 0;
     float: left;
     width: 53%;
@@ -2446,7 +2446,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   padding: 6.5em 0 0;
 }
 a.item_add p.number {
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 .b-from-left {
   min-height: 440px;
