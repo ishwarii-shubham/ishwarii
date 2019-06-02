@@ -1332,7 +1332,7 @@ color:#964b21;
 .single-para h5 {
   color:#964b21;
   font-size: 1.7em;
-  border-bottom: 1px solid #C4C3C3;
+  /*border-bottom: 1px solid #C4C3C3;*/
   padding: 0.3em 0;
 }
 
@@ -3670,3 +3670,87 @@ Testimonail See All Main components
 		display: none;
 	}
 }
+
+
+
+
+/*----------------------
+ tabOne start
+ -----------------------*/
+.tabOne {}
+.tabOne .nav-tabs {
+    border: 1px solid #eee;
+    border-bottom: none;
+    }
+.tabOne .nav-tabs.nav-justified li {
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    }
+.tabOne .nav-tabs.nav-justified li.active {
+    border-bottom: 1px solid #fff;
+    }
+.tabOne .nav-tabs.nav-justified li:last-child {
+    border-right: 0;
+    }
+.tabOne .nav-tabs.nav-justified>li>a {
+    border: 0;
+    border-radius: 0;
+    background-color: #f9f9f9;
+    color: #969595;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    }
+.tabOne .nav-tabs.nav-justified>.active>a,
+.tabOne .nav-tabs.nav-justified>.active>a:focus,
+.tabOne .nav-tabs.nav-justified>.active>a:hover {
+    border: 0;
+    background-color: #fff;
+    color: #31aae2;
+    }
+
+/*media query*/
+
+@media (min-width : 768px) {
+    .tabOne .tab-content{
+        border: 1px solid #eee;
+        padding: 30px;
+        border-top: 0;
+        overflow: hidden;
+        background: #fff;
+        }
+    }
+
+@media screen and (max-width : 600px) {
+    .tabOne .tab-content{
+        margin-top: 30px;
+        }
+    }
+/* Product Description */
+
+.tabOne .tab-pane img {
+    margin-top: 8px;
+    }
+.tabOne .tab-pane img.pull-left {
+    margin-right: 20px;
+    }
+.tabOne .tab-pane img.pull-right {
+    margin-left: 20px;
+    }
+/*collapse in small devices*/
+.tabOne .panel-body img{
+    margin-top: 8px;
+    }
+.tabOne .panel-body img.pull-left {
+    margin-right: 20px;
+    }
+.tabOne .panel-body img.pull-right {
+    margin-left: 20px;
+    }
+
+.tabOne .tab-pane p {
+    margin-bottom: 15px;
+    }
+.tabOne .tab-pane p:last-of-type {
+    margin-bottom: 0;
+    }

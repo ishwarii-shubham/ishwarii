@@ -74,9 +74,36 @@
 										</div>
 
 										<h5 class="item_price">₹ 500.00</h5>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+										<!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 											diam nonummy nibh euismod tincidunt ut laoreet dolore
-											magna aliquam erat </p>
+											magna aliquam erat </p> -->
+											<!-- <div class="col-md-12 col-sm-12 tabOne"> -->
+				                <div role="tabpanel">
+				                    <!-- Nav tabs -->
+				                    <ul id="tabOne" class="nav nav-tabs nav-justified">
+				                        <li class="active"><a href="#contentOne-1" data-toggle="tab" aria-expanded="true">Description</a></li>
+				                        <li class=""><a href="#contentOne-2" data-toggle="tab" aria-expanded="false">Benifits</a></li>
+				                    </ul>
+
+				                    <!-- Tab panes -->
+				                    <div class="tab-content">
+				                        <div class="tab-pane fade active in" id="contentOne-1">
+				                            <p><b>This tasty and very healthy snack</b> enhances your vision, boosts your immune system and protects your skin. A storehouse of antioxidants, apricots prevents anaemia, improve digestion and strengthen bones. When farmed naturally without chemical fertilizers and pesticides, apricots can prevent Neovascular ARMD, an age-related eye problem that leads to loss of complete vision.</p>
+				                        </div>
+				                        <div class="tab-pane fade" id="contentOne-2">
+																		<p><b><i>Nutrients in 100 grams of apricot:</i></b></p>
+				                            <ul style="list-style-type: circle; margin-left:20px;">
+				                                <li>48 calories</li>
+				                                <li>1.40 gram protein</li>
+				                                <li>0.39 gram fat</li>
+				                                <li>11.12 gram carbohydrates</li>
+				                                <li>2 grams fibre</li>
+																				<li>9.20 gram natural fruit sugar.</li>
+				                            <ul>
+				                        </div>
+				                    </div>
+				                </div> <!--.tabpanel-->
+				            <!-- </div> -->
 										<div class="available">
 											<ul>
 												<li>Quantity
@@ -160,6 +187,10 @@
 			</div>
 		</div>
 		<!--//content-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+		<script src="js/scripts.js"></script>
 		<?php include('assets/footer.php'); ?>
 	</body>
 </html>
