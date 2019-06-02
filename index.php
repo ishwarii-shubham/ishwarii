@@ -116,6 +116,7 @@
 							<div class="clearfix"> </div>
 						</div>
 					</div>
+
 					<div class="content-top">
 						<h1>NEW PRODUCTS</h1>
 						<div class="grid-in">
@@ -263,7 +264,7 @@
 
 									<div class="row">
 										<div class="col-sm-offset-2 col-sm-8">
-											<div>
+											<div style="margin-top:10px">
 												<a href="#0" class="cd-see-all">See All</a>
 											</div>
 										</div><!-- /End col -->
