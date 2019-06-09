@@ -1,19 +1,31 @@
 <?php require_once('product_class.php');  ?>
+<?php
+	if($_REQUEST['id']){
+		$id = $_REQUEST['id'];
+	}
+	else{
+		$id = 4;
+	}
+	// CHECKING IF PRODUCT EXISTS
+	$pr = get_product_details($id);
+	if(empty($pr['price_list'])){
+		header('location: http://localhost:3333/is/ishwarii/products.php');
+	}else{
+		$product = get_product_details($id);
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 	<?php include('assets/head.php'); ?>
+	<!-- <meta http-equiv="refresh" content="1 products.php"> -->
 	<script src="js/imagezoom.js"></script>
 	<body>
 		<?php include('assets/header.php'); ?>
-		<?php
-			
-			$product = get_product_details(4);
-			// $price_list = get_value($stmt, ['quantity','price', 'weight']);
-		?>
 		<!-- grow -->
 		<div class="grow">
 			<div class="container">
-				<h2><?php echo $product['product_name']; ?></h2>
+				<h2><?php echo($product['product_name']); ?></h2>
 			</div>
 		</div>
 
@@ -67,7 +79,15 @@
 								</div>
 								<div class="col-md-5 single-top-in simpleCart_shelfItem">
 									<div class="single-para ">
-										<h4><?php echo $product['product_name'].'-('.$product['sub_type'][0]['sub_type'].')';?> </h4>
+										<h4>
+											<?php
+												$sub_type = $product['sub_type'][0]['sub_type'];
+												if($sub_type != '' and $sub_type != null){
+													$sub_type = '-('.$sub_type.')';
+												}
+												echo $product['product_name'].$sub_type;
+											?>
+										</h4>
 										<div class="star-on">
 
 											<div class="review">
