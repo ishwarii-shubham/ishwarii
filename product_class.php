@@ -6,49 +6,47 @@
 			function show_product($id) {
 
 				$stmt = $this->dbConn->prepare('SELECT
-	a.id as product_id,
-	product_name,
-	description,
-	properties,
-	sub_type,
-	price,
-	quantity,
-	weight,
-	image_url,
-	d.sub_id as sub_id,
-	image_type,
-	d.id as price_id
-	 from product_details a,product_type b,prouct_images c,price_list d where a.id = 4 and a.id = b.product_id and b.id = c.sub_id
-	group by
-		a.id ,
-	product_name,
-	description,
-	properties,
-	sub_type,
-		d.sub_id,
-	price,
-	quantity,
-	weight,
-	image_url,
-	image_type,
-	d.id');
+					a.id as product_id,
+					product_name,
+					description,
+					properties,
+					sub_type,
+					price,
+					quantity,
+					weight,
+					image_url,
+					d.sub_id as sub_id,
+					image_type,
+					d.id as price_id
+					 from product_details a,product_type b,prouct_images c,price_list d where a.id = :id and a.id = b.product_id and b.id = c.sub_id
+					group by
+						a.id ,
+					product_name,
+					description,
+					properties,
+					sub_type,
+						d.sub_id,
+					price,
+					quantity,
+					weight,
+					image_url,
+					image_type,
+					d.id');
         $stmt->bindParam(":id", $id);
         $stmt->execute();
 				return $stmt;
-				// return $stmt->fetchAll();
-        // return $stmt->fetch(PDO::FETCH_ASSOC);
-
-
-
 			}
 		}
 
 
-
+// Filter
 		function create_filter($column, $value){
 			return array($column => $value);
 		}
 
+
+
+// Filter Data
 		function filter_data($stmt, $column, $filter=null){
 			if (!$filter){
 				$id = get_value($stmt, 'sub_id');
@@ -78,8 +76,7 @@
 		}
 
 
-
-
+// Get value with filters
 		function get_value($stmt, $column ,$filter = null){
 			if(!$filter && !is_array($column)){
 				return $stmt->fetch(PDO::FETCH_ASSOC)[$column];
@@ -95,6 +92,7 @@
 		}
 
 
+//Single Product Details
 		function get_product_details($id){
 			$result = array();
 			$Product = new Product();
@@ -104,8 +102,9 @@
 			$result['product_description'] = get_value($stmt, 'description');
 			$result['product_properties'] = get_value($stmt, 'properties');
 			$result['sub_type'] = get_value($stmt, ['sub_type']);
+			$stmt = $Product->show_product($id);
 			$result['price_list'] = get_value($stmt, ['price_id' ,'quantity', 'price', 'weight']);
-			$stmt = $Product->show_product(4);
+			$stmt = $Product->show_product($id);
 			$result['banner'] = filter_data($stmt, 'image_url', $filter);
 			return $result;
 		}

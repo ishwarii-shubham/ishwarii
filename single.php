@@ -6,8 +6,8 @@
 	<body>
 		<?php include('assets/header.php'); ?>
 		<?php
+			
 			$product = get_product_details(4);
-
 			// $price_list = get_value($stmt, ['quantity','price', 'weight']);
 		?>
 		<!-- grow -->
@@ -77,7 +77,7 @@
 											<div class="clearfix"> </div>
 										</div>
 
-										<h5 class="item_price" id = 'item_price_value'>500<?php ?></h5>
+										<h4 class="item_price" style="display: inline; float: left;">₹ </h4></h5><h5 style="display: inline;" class="item_price" id = 'item_price_value'>500<?php ?></h5>
 
 										 <div role="tabpanel">
 												 <!-- Nav tabs -->
