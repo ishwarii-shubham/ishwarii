@@ -6,33 +6,61 @@
 			function show_product($id) {
 
 				$stmt = $this->dbConn->prepare('SELECT
-					a.id as product_id,
-					product_name,
-					description,
-					properties,
-					sub_type,
-					price,
-					quantity,
-					weight,
-					image_url,
-					d.sub_id as sub_id,
-					image_type,
-					d.id as price_id
-					 from product_details a,product_type b,prouct_images c,price_list d where a.id = :id and a.id = b.product_id and b.id = c.sub_id
+						a.id as product_id,
+						product_name,
+						description,
+						properties,
+						sub_type,
+						price,
+						quantity,
+						weight,
+						image_url,
+						d.sub_id as sub_id,
+						image_type,
+						d.id as price_id
+					from
+						product_details a,product_type b,prouct_images c,price_list d where a.id = :id and a.id = b.product_id and b.id = c.sub_id
 					group by
 						a.id ,
-					product_name,
-					description,
-					properties,
-					sub_type,
+						product_name,
+						description,
+						properties,
+						sub_type,
 						d.sub_id,
-					price,
-					quantity,
-					weight,
-					image_url,
-					image_type,
-					d.id');
+						price,
+						quantity,
+						weight,
+						image_url,
+						image_type,
+						d.id');
+
         $stmt->bindParam(":id", $id);
+        $stmt->execute();
+				return $stmt;
+			}
+
+
+			function all_products() {
+				$stmt = $this->dbConn->prepare('SELECT
+						d.sub_id as sub_id,
+						product_name,
+						sub_type,
+						price,
+						quantity,
+						weight,
+						image_url,
+						d.id as price_id
+					from
+						product_details a,product_type b,prouct_images c,price_list d where a.status = 1 and c.image_type = \'BP\'and a.id = b.product_id and b.id = c.sub_id
+					group by
+						d.sub_id,
+						product_name,
+						sub_type,
+						price,
+						quantity,
+						weight,
+						image_url');
+        // $stmt->bindParam(":id", $id);
         $stmt->execute();
 				return $stmt;
 			}
