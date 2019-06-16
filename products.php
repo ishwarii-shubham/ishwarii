@@ -1,4 +1,4 @@
-<?php require_once('product_class.php');  ?>
+<?php require_once('assets/product_class.php');  ?>
 <?php
 
 	$Product = new Product();
