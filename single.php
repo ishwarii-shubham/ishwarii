@@ -24,10 +24,9 @@
 		<!-- grow -->
 		<div class="grow">
 			<div class="container">
-				<h2><?php echo($product['product_name']); ?></h2>
+				<h2 ><?php echo($product['product_name']); ?></h2>
 			</div>
 		</div>
-
 		<!-- grow -->
 		<div class="contact">
 			<div class="container" style="background-color:white; border-radius:10px 10px; position: relative;">
@@ -78,15 +77,17 @@
 								</div>
 								<div class="col-md-5 single-top-in simpleCart_shelfItem">
 									<div class="single-para ">
-										<h4>
-											<?php
-												$sub_type = $product['sub_type'][0]['sub_type'];
-												if($sub_type != '' and $sub_type != null){
-													$sub_type = '-('.$sub_type.')';
-												}
-												echo $product['product_name'].$sub_type;
-											?>
-										</h4>
+										<div class="simpleCart_shelfItem">
+											<h4 class="item_name">
+												<?php
+													$sub_type = $product['sub_type'][0]['sub_type'];
+													if($sub_type != '' and $sub_type != null){
+														$sub_type = '-('.$sub_type.')';
+													}
+													echo $product['product_name'].$sub_type;
+												?>
+											</h4>
+										</div>
 										<div class="star-on">
 
 											<div class="review">
@@ -96,9 +97,12 @@
 											<div class="clearfix"> </div>
 										</div>
 
-										<h4 class="item_price" style="display: inline; float: left;">₹ </h4></h5><h5 style="display: inline;" class="item_price" id = 'item_price_value'>500<?php ?></h5>
-
-										 <div role="tabpanel">
+										<h4 style="display: inline; float: left;">₹ </h4>
+										<h5 style="display: inline;" class="item_price" id = 'item_price_value'>500<?php ?></h5>
+										<p style="display:none;" class="item_bp"><?php echo $product['bp']; ?><p>
+										<p id="item_weight" style="display:none;" class="item_weight"><p>
+										<p id="item_price_id" style="display:none;" class="item_id"><p>
+										<div role="tabpanel">
 												 <!-- Nav tabs -->
 												 <ul id="tabOne" class="nav nav-tabs nav-justified">
 														 <li class="active"><a href="#contentOne-1" data-toggle="tab" aria-expanded="true">Description</a></li>
@@ -129,7 +133,7 @@
 															$quan = array();
 															foreach ($product['price_list'] as $value) {
 																if(!in_array($value['price_id'],$quan)){
-																	echo '<option value = \''.$value['price'].'\'>'.$value['quantity'];
+																	echo '<option value = \''.implode(",",$value).'\'>'.$value['quantity'];
 																	if($value['weight'] == 0){
 																		echo ' Gm';
 																	}
@@ -144,7 +148,7 @@
 													</select>
 												</li>
 												<li>Quantity
-													<input style="width: 64%; margin-left: 7%;"type="number" value="1" min="1" max="100">
+													<input style="width: 64%; margin-left: 7%;" type="number"  min="1" max="100" value="1" class="item_Quantity">
 												</li>
 													<!-- <select>
 														<option>Dry</option>
@@ -154,7 +158,7 @@
 											</ul>
 										</div>
 
-										<a href="#" class="add-cart item_add">ADD TO CART</a>
+										<a href="#" class="add-cart item_add" name="varun">ADD TO CART</a>
 
 									</div>
 								</div>
@@ -222,10 +226,15 @@
 		<!--//content-->
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$("#item_price_value").html($("#source").val());
+				$("#item_price_value").html($("#source").val().split(",")[2]);
+				$("#item_weight").html($("#source").val().split(",")[1]);
+				$("#item_price_id").html($("#source").val().split(",")[0]);
 			  $("#source").change(function() {
-			   var el = $(this).val();
-				 $("#item_price_value").html(el);
+			   var el = $(this).val().split(",");
+				 $("#item_price_value").html(el[2]);
+				 var weight = (el[3] == 0) ? el[1].toString()+' Gm' : el[1].toString()+' Kg';
+				 $("#item_weight").html(weight);
+				 $("#item_price_id").html(el[0]);
 			  });
 			});
 		</script>

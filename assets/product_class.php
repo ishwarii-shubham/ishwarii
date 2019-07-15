@@ -202,6 +202,9 @@
 			$stmt = $Product->show_product($id);
 			$filter = create_filter('image_type', ['PP']);
 			$result['banner'] = filter_data($stmt, 'image_url', $filter);
+      $stmt = $Product->show_product($id);
+      $filter = create_filter('image_type', ['BP']);
+			$result['bp'] = filter_data($stmt, 'image_url', $filter)[0];
 			$stmt = $Product->show_product($id);
 			$result['product_name'] = get_unique_product($stmt, 'product_name');
 			$result['product_description'] = get_unique_product($stmt, 'description');

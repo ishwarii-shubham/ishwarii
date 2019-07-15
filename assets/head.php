@@ -33,4 +33,5 @@
 	<script type="text/javascript" src="js/memenu.js"></script>
 	<script>$(document).ready(function () { $(".memenu").memenu(); });</script>
 	<script src="js/simpleCart.min.js"> </script>
+	<script src="js/cart.js"> </script>
 </head>
