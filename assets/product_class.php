@@ -1,9 +1,9 @@
-<?php 
+<?php
         include('DbConnect.php');
         class BaseController
         {
             public $dbConn;
-        
+
             function __construct()
             {
                 $db = new DbConnect;
@@ -71,6 +71,37 @@
 						product_details a,product_type b,prouct_images c,price_list d, category e
 					where
 						a.status = 1 and c.image_type = \'BP\' and a.id = b.product_id and b.id = c.sub_id and e.id = a.category_id and d.sub_id = b.id
+					group by
+						e.id,
+						d.sub_id,
+						category_name,
+						product_name,
+						sub_type,
+						image_url,
+						b.status');
+        // $stmt->bindParam(":id", $id);
+        $stmt->execute();
+				return $stmt;
+			}
+
+      // INDEX PAGE PRODUCT
+      function landing_products() {
+				$stmt = $this->dbConn->prepare('SELECT
+						e.id as category_id,
+						d.sub_id as sub_id,
+						category_name,
+						product_name,
+						sub_type,
+						image_url,
+						b.status as status,
+						min(price) as price,
+						(case when price = min(price) then quantity end)as quantity,
+						(case when price = min(price) then weight end)as weight,
+						(case when price = min(price) then d.id end)as price_id
+					from
+						product_details a,product_type b,prouct_images c,price_list d, category e
+					where
+						a.status = 1 and c.image_type = \'BP\' and a.id = b.product_id and b.id = c.sub_id and e.id = a.category_id and d.sub_id = b.id and b.index_status = 1
 					group by
 						e.id,
 						d.sub_id,

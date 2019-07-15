@@ -1,3 +1,8 @@
+<?php require_once('assets/product_class.php');  ?>
+<?php
+
+	$Product = new Product();
+?>
 <!DOCTYPE html>
 <html>
 	<?php include('assets/head.php'); ?>
@@ -139,62 +144,32 @@
 					<div class="content-top">
 						<h1>PRODUCTS</h1>
 						<div class="grid-in">
-							<div class="col-md-3 grid-top simpleCart_shelfItem">
-								<a href="product_check.php?id=1" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images1/dried-apricots.jpeg"
-									alt="">
-									<div class="b-wrapper">
-										<h3 class="b-animate b-from-left    b-delay03 ">
-											<span>Dried Apricots</span>
-										</h3>
+
+							<!-- Start of Product PHP-->
+							<?php
+								$stmt = $Product->landing_products();
+								while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
+									// echo('<h1>'); print_r($result); echo('</h1>');
+									?>
+									<div class="col-md-3 grid-top simpleCart_shelfItem">
+										<a href="product_check.php?id=<?php echo $result['sub_id']; ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo $result['image_url']; ?>"
+											alt="">
+											<div class="b-wrapper">
+												<h3 class="b-animate b-from-left    b-delay03 ">
+													<span><?php echo $result['product_name']; ?></span>
+												</h3>
+											</div>
+										</a>
+										<p><a href="product_check.php?id=1"><?php echo $result['product_name']; ?></a></p>
+										<a href="#" class="item_add">
+											<p class="number item_price"><i> </i>₹<?php echo $result['price']; ?>.00</p>
+										</a>
 									</div>
-								</a>
-								<p><a href="product_check.php?id=1">Dried Apricots</a></p>
-								<a href="#" class="item_add">
-									<p class="number item_price"><i> </i>₹90.00</p>
-								</a>
-							</div>
-							<div class="col-md-3 grid-top simpleCart_shelfItem">
-								<a href="product_check.php?id=11" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images1/Flour.jpeg"
-									alt="">
-									<div class="b-wrapper">
-										<h3 class="b-animate b-from-left    b-delay03 ">
-											<span>Buckwheat Flour</span>
-										</h3>
-									</div>
-								</a>
-								<p><a href="product_check.php?id=11">Buckwheat Flour</a></p>
-								<a href="#" class="item_add">
-									<p class="number item_price"><i> </i>₹199.00</p>
-								</a>
-							</div>
-							<div class="col-md-3 grid-top simpleCart_shelfItem">
-								<a href="product_check.php?id=7" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/Honey2.jpg"
-									alt="">
-									<div class="b-wrapper">
-										<h3 class="b-animate b-from-left    b-delay03 ">
-											<span>Honey-(White)</span>
-										</h3>
-									</div>
-								</a>
-								<p><a href="product_check.php?id=7">Honey-(White)</a></p>
-								<a href="#" class="item_add">
-									<p class="number item_price"><i> </i>₹1199.00</p>
-								</a>
-							</div>
-							<div class="col-md-3 grid-top">
-								<a href="product_check.php?id=5" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images1/pine-nuts.jpeg"
-									alt="">
-									<div class="b-wrapper">
-										<h3 class="b-animate b-from-left    b-delay03 ">
-											<span>Pine Nuts</span>
-										</h3>
-									</div>
-								</a>
-								<p><a href="single.php">Pine Nuts</a></p>
-								<a href="#" class="item_add">
-									<p class="number item_price"><i> </i>₹399.00</p>
-								</a>
-							</div>
+									<?php
+								}
+							?>
+
+							<!-- End of Product-->
 							<div class="clearfix"> </div>
 						</div>
 					</div>
