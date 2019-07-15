@@ -1,3 +1,7 @@
+<?php
+	require_once('assets/product_class.php');
+	$Product = new Product();
+?>
 <!--header-->
 <div class="header" style="background-color: #22211f;">
 	<div class="header-top">

@@ -1,8 +1,3 @@
-<?php require_once('assets/product_class.php');  ?>
-<?php
-
-	$Product = new Product();
-?>
 <!DOCTYPE html>
 <html>
 	<?php include('assets/head.php'); ?>

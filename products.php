@@ -1,10 +1,3 @@
-<?php require_once('assets/product_class.php');  ?>
-<?php
-
-	$Product = new Product();
-	$stmt = $Product->all_products();
-	$categories = get_all_products($stmt, ['category_id', 'category_name']);
-?>
 <!DOCTYPE html>
 <html>
 	<?php include('assets/head.php'); ?>
@@ -15,6 +8,10 @@
 
 	<body>
 		<?php include('assets/header.php'); ?>
+		<?php
+			$stmt = $Product->all_products();
+			$categories = get_all_products($stmt, ['category_id', 'category_name']);
+		?>
 	<!-- products -->
 	<!-- grow -->
 	<div class="grow">

@@ -1,20 +1,3 @@
-<?php require_once('assets/product_class.php');  ?>
-<?php
-	if($_REQUEST['id']){
-		$id = $_REQUEST['id'];
-	}
-	else{
-		$id = 4;
-	}
-	// CHECKING IF PRODUCT EXISTS
-	$pr = get_product_details($id);
-	if(empty($pr['price_list'])){
-		header('location: http://ishwarii.com/ishwarii/products.php');
-	}else{
-		$product = get_product_details($id);
-	}
-
-?>
 <!DOCTYPE html>
 <html>
 	<?php include('assets/head.php'); ?>
@@ -22,6 +5,22 @@
 	<script src="js/imagezoom.js"></script>
 	<body>
 		<?php include('assets/header.php'); ?>
+		<?php
+			if($_REQUEST['id']){
+				$id = $_REQUEST['id'];
+			}
+			else{
+				$id = 4;
+			}
+			// CHECKING IF PRODUCT EXISTS
+			$pr = get_product_details($id);
+			if(empty($pr['price_list'])){
+				header('location: http://ishwarii.com/ishwarii/products.php');
+			}else{
+				$product = get_product_details($id);
+			}
+
+		?>
 		<!-- grow -->
 		<div class="grow">
 			<div class="container">
