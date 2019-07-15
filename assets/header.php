@@ -45,7 +45,6 @@
 							</h3>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -68,39 +67,50 @@
 					<li><a class="color1" href="products.php">Products</a>
 						<div class="mepanel">
 							<div class="row">
-								<div class="col1">
-									<div class="h_nav">
-										<ul>
-											<li><a href="product_check.php?id=1">Dried Apricots</a></li>
-											<li><a href="product_check.php?id=5">Pine Nuts</a></li>
-											<li><a href="product_check.php?id=6">Honey</a></li>
-											<li><a href="product_check.php?id=7">Honey (White)</a></li>
-											<li><a href="product_check.php?id=9">Kala Zeera</a></li>
-											<li><a href="product_check.php?id=10">Gur-Shakkar</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="col1">
-									<div class="h_nav">
-										<ul>
-											<li><a href="product_check.php?id=8">Himalayan-Born Rajma</a></li>
-											<li><a href="product_check.php?id=12">Himalayan-Red Rice</a></li>
-											<li><a href="product_check.php?id=14">Himalayan-White Rice</a></li>
-											<li><a href="product_check.php?id=13">Himalayan-Basmati Rice</a></li>
-
-										</ul>
-									</div>
-								</div>
-								 <div class="col1">
-									<div class="h_nav">
-										<ul>
-											<li><a href="product_check.php?id=15"></a>Walnuts</li>
-											<li><a href="product_check.php?id=16">Apple</a></li>
-											<li><a href="product_check.php?id=11">Buckwheat Flour</a></li>
-
-										</ul>
-									</div>
-								</div>
+								<!-- Product Listing -->
+								<?php
+									$stmt = $Product->all_products();
+									$products = get_all_products($stmt, ['product_id', 'product_name']);
+									if (sizeof($products)){
+										foreach ($products as $key => $val) {
+											if(!($key % 6)){
+												if($key == 0){
+													// Product List Start
+													echo ('<div class="col1"><div class="h_nav"><ul>');
+													echo('<li><a href="product_check.php?id='.$val['product_id'].'">'.$val['product_name'].'</a></li>');
+												}else{
+													if(sizeof($products)-1 == $key){
+														// Product List End
+														echo('<li><a href="product_check.php?id='.$val['product_id'].'">'.$val['product_name'].'</a></li>');
+														echo('</ul></div></div>');
+													}else{
+														echo('</ul></div></div><div class="col1"><div class="h_nav"><ul>');
+														echo('<li><a href="product_check.php?id='.$val['product_id'].'">'.$val['product_name'].'</a></li>');
+													}
+												}
+											}else{
+												if(sizeof($products)-1 == $key){
+													// Product List End
+													echo('<li><a href="product_check.php?id='.$val['product_id'].'">'.$val['product_name'].'</a></li>');
+													echo('</ul></div></div>');
+												}else{
+													// Product Add to Div
+													echo('<li><a href="product_check.php?id='.$val['product_id'].'">'.$val['product_name'].'</a></li>');
+												}
+											}
+										}
+									}else{
+								    ?>
+								    <div class="col1">
+								      <div class="h_nav">
+								        <ul>
+								          <li><a href="#">Add Products</a></li>
+								        </ul>
+								      </div>
+								    </div>
+								    <?php
+								  }
+								?>
 							</div>
 						</div>
 					</li>
