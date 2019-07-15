@@ -1,3 +1,10 @@
+<?php require_once('assets/product_class.php');  ?>
+<?php
+
+	$Product = new Product();
+	$stmt = $Product->all_products();
+	$categories = get_all_products($stmt, ['category_id', 'category_name']);
+?>
 <!DOCTYPE html>
 <html>
 	<?php include('assets/head.php'); ?>
@@ -24,9 +31,9 @@
 						<div class="cd-tab-filter-wrapper">
 							<div class="cd-tab-filter">
 								<ul class="cd-filters">
-									<li class="placeholder"> 
+									<li class="placeholder">
 										<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
-									</li> 
+									</li>
 									<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
 									<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Best Seller</a></li>
 									<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">New</a></li>
@@ -36,147 +43,29 @@
 
 						<section class="cd-gallery">
 							<ul>
-								<li class="mix color-1 check1 radio2 option3">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images/cow-ghee.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
+								<?php
+									$stmt = $Product->all_products();
+									while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
+										// print_r($result);
+										?>
+										<li class="mix color-1 check<?php echo $result['category_id'];?> radio2 option3">
+											<div class="product-at ">
+												<a href="product_check.php?id=<?php echo $result['sub_id']; ?>"><img class="img-responsive" src="<?php echo $result['image_url']; ?>" alt="">
+													<div class="pro-grid">
+														<span class="buy-in">Buy Now</span>
+													</div>
+												</a>
 											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>Cow Ghee</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-2 check2 radio2 option2">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images1/dried-apricots.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
+											<p class="tun"><span><b><?php echo $result['product_name']; ?></b></span></p>
+											<div class="ca-rt">
+												<a href="#" class="item_add">
+													<p class="number item_price"><i> </i>₹<?php echo $result['price']; ?>.00</p>
+												</a>
 											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>Apricots</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-1 check3 radio3 option1">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images1/rajma.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
-											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>Rajma</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-1 check3 radio2 option4">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images1/white-honey.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
-											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>White Honey</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-1 check1 radio3 option2">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images1/yellow-rajma.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
-											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>Yellow Rajma</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-2 check2 radio3 option3">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images1/rice.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
-											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>Rice</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-2 check2 radio2 option1">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images1/KallaZeera.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
-											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>Kala Jeera</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-1 check1 radio3 option4">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images1/oil.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
-											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>Oil</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-2 check1 radio2 option3">
-									<div class="product-at ">
-										<a href="single.php"><img class="img-responsive" src="images1/walnut.jpg" alt="">
-											<div class="pro-grid">
-												<span class="buy-in">Buy Now</span>
-											</div>
-										</a>
-									</div>
-									<p class="tun"><span><b>Walnut</b></span></p>
-									<div class="ca-rt">
-										<a href="#" class="item_add">
-											<p class="number item_price"><i> </i>₹500.00</p>
-										</a>
-									</div>
-								</li>
-								<li class="mix color-1 check3 radio2 option4"><img src="img/img-10.jpg" alt="Image 10"></li>
-								<li class="mix color-1 check3 radio3 option2"><img src="img/img-11.jpg" alt="Image 11"></li>
-								<li class="mix color-2 check1 radio3 option1"><img src="img/img-12.jpg" alt="Image 12"></li>
-								<li class="gap"></li>
-								<li class="gap"></li>
-								<li class="gap"></li>
+										</li>
+									 <?php
+								 }
+								?>
 							</ul>
 							<div class="cd-fail-message">No results found</div>
 						</section> <!-- cd-gallery -->
@@ -185,7 +74,7 @@
 							<form>
 								<div class="cd-filter-block">
 									<h4>Search</h4>
-									
+
 									<div class="cd-filter-content">
 										<input type="search" placeholder="Try ghee...">
 									</div> <!-- cd-filter-content -->
@@ -195,26 +84,21 @@
 									<h4>Categories</h4>
 
 									<ul class="cd-filter-content cd-filters list">
-										<li>
-											<input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
-											<label class="checkbox-label" for="checkbox1">Rice</label>
-										</li>
-
-										<li>
-											<input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
-											<label class="checkbox-label" for="checkbox2">Dal</label>
-										</li>
-
-										<li>
-											<input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
-											<label class="checkbox-label" for="checkbox3">Ghee</label>
-										</li>
+										<?php foreach ($categories as $val) {
+											# code...
+											?>
+											<li>
+												<input class="filter" data-filter=".check<?php echo $val['category_id']; ?>" type="checkbox" id="checkbox<?php echo $val['category_id']; ?>">
+												<label class="checkbox-label" for="checkbox<?php echo $val['category_id']; ?>"><?php echo $val['category_name']; ?></label>
+											</li>
+											<?php
+										}?>
 									</ul> <!-- cd-filter-content -->
 								</div> <!-- cd-filter-block -->
 
 								<div class="cd-filter-block">
 									<h4>Quantity</h4>
-									
+
 									<div class="cd-filter-content" style="color:black;">
 										<div class="cd-select cd-filters">
 											<select class="filter" name="selectThis" id="selectThis">
@@ -261,7 +145,7 @@
 		</div>
 	</div>
 	<?php include('assets/footer.php'); ?>
-	<script src="js/jquery-2.1.1.js"></script>
+	<!-- <script src="js/jquery-2.1.1.js"></script> -->
 	<script src="js/jquery.mixitup.min.js"></script>
 	<script src="js/main-product.js"></script> <!-- Resource jQuery -->
 

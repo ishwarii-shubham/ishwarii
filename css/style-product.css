@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -30,9 +30,9 @@ a {
   text-decoration: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main Components 
+Main Components
 
 -------------------------------- */
 .cd-header {
@@ -98,9 +98,9 @@ Main Components
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xtab-filter 
+xtab-filter
 
 -------------------------------- */
 .cd-tab-filter-wrapper {
@@ -247,9 +247,9 @@ xtab-filter
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xgallery 
+xgallery
 
 -------------------------------- */
 .cd-gallery {
@@ -275,7 +275,7 @@ xgallery
   display: none;
   text-align: center;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 380px) {
   .cd-gallery {
     padding: 40px 3%;
   }
@@ -289,9 +289,9 @@ xgallery
   }
   .cd-gallery li {
     width: 48%;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     padding: 1%;
-    background-color: #e2dcd926;
+    background-color: black;
     border-radius: 5px;
   }
 }
@@ -306,7 +306,7 @@ xgallery
   .cd-gallery li {
     width: 23%;
     padding: 1%;
-    background-color: #e2dcd926;
+    background-color: black;
     border-radius: 5px;
   }
   .cd-gallery.filter-is-visible {
@@ -315,9 +315,9 @@ xgallery
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xfilter 
+xfilter
 
 -------------------------------- */
 .cd-filter {
@@ -441,9 +441,9 @@ xfilter
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xcustom form elements 
+xcustom form elements
 
 -------------------------------- */
 .cd-filter-block {

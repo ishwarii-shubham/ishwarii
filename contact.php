@@ -40,9 +40,9 @@
 					</div>
 					<div class="address-more">
 						<h4>Address1</h4>
-						<p>Tel:1115550001</p>
-						<p>Fax:190-4509-494</p>
-						<p>Email:<a href="mailto:contact@example.com"> contact@example.com</a></p>
+						<p>Sanjay Negi:+919871020454</p>
+						<p>Priti Payal:+919953857606</p>
+						<p>Email:<a href="mailto:contact@example.com"> contact@ishwarii.com</a></p>
 					</div>
 
 				</div>

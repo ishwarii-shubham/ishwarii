@@ -7,7 +7,7 @@
                 <ul class="nav-bottom">
                     <li><a href="#">How to order</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="contact.html">Location</a></li>
+                    <li><a href="contact.php">Location</a></li>
                     <li><a href="#">Shipping</a></li>
                     <li><a href="#">Membership</a></li>
                 </ul>
@@ -15,11 +15,11 @@
             <div class="col-md-3 amet-sed w3ls">
                 <h4>CATEGORIES</h4>
                 <ul class="nav-bottom">
-                    <li><a href="products/Dry-Fruits.html">Dry Fruits</a></li>
-                    <li><a href="products/Spices.html">Spices</a></li>
-                    <li><a href="products/Flours.html">Flours</a></li>
-                    <li><a href="products/Kinnauri-apples.html">Kinnauri Apples</a></li>
-                    <li><a href="T-&-C.html">Terms & Conditions</a></li>
+                    <li><a href="#">Honey</a></li>
+                    <li><a href="#">Rice</a></li>
+                    <li><a href="#">Flours</a></li>
+                    <li><a href="#">Kinnauri Apples</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
                 </ul>
 
             </div>
@@ -42,9 +42,10 @@
             </div>
             <div class="col-md-3 amet-sed agileits-w3layouts">
                 <h4>CONTACT US</h4>
-                <p>Contrary to popular belief</p>
-                <p>The standard chunk</p>
-                <p>office : +12 34 995 0792</p>
+                <p>Email:<a href="mailto:contact@example.com" style="text-decoration: none; color: #f9e0d3;"> contact@ishwarii.com</a></p>
+                <p>Sanjay Negi : <a href="#" style="text-decoration: none; color: #f9e0d3;">+919871020454</a></p>
+                <p>Priti Payal :<a href="#" style="text-decoration: none; color: #f9e0d3;">+919953857606</a></p>
+                <!--<p>office : +12 34 995 0792</p>-->
             </div>
             <div class="clearfix"> </div>
         </div>

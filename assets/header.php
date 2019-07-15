@@ -67,44 +67,44 @@
 								<div class="col1">
 									<div class="h_nav">
 										<ul>
-											<li><a href="ghee.php">Ghee</a></li>
-											<li><a href="products/Essential-Oils.html">Essential oils</a></li>
-											<li><a href="products/Lentils.html">Lentils</a></li>
-											<li><a href="products/Butter.html">Butter</a></li>
-											<li><a href="products/Spices.html">Spices</a></li>
-											<li><a href="products/Dry-Fruits.html">Dry Fruits</a></li>
+											<li><a href="product_check.php?id=1">Dried Apricots</a></li>
+											<li><a href="product_check.php?id=5">Pine Nuts</a></li>
+											<li><a href="product_check.php?id=6">Honey</a></li>
+											<li><a href="product_check.php?id=7">Honey (White)</a></li>
+											<li><a href="product_check.php?id=9">Kala Zeera</a></li>
+											<li><a href="product_check.php?id=10">Gur-Shakkar</a></li>
 										</ul>
 									</div>
 								</div>
 								<div class="col1">
 									<div class="h_nav">
 										<ul>
-											<li><a href="products/Flours.html">Flours</a></li>
-											<li><a href="products/Kinnauri-apples.html">Kinnauri Apples</a></li>
-											<li><a href="products/Honey.html">Honey</a></li>
-											<li><a href="products/Himalayan-Rice.html">Local Himalayan Rice</a></li>
+											<li><a href="product_check.php?id=8">Himalayan-Born Rajma</a></li>
+											<li><a href="product_check.php?id=12">Himalayan-Red Rice</a></li>
+											<li><a href="product_check.php?id=14">Himalayan-White Rice</a></li>
+											<li><a href="product_check.php?id=13">Himalayan-Basmati Rice</a></li>
 
 										</ul>
 									</div>
 								</div>
-								<!-- <div class="col1">
+								 <div class="col1">
 									<div class="h_nav">
 										<ul>
-											<li><a href="#"></a></li>
-											<li><a href="#"></a></li>
-											<li><a href="#"></a></li>
+											<li><a href="product_check.php?id=15"></a>Walnuts</li>
+											<li><a href="product_check.php?id=16">Apple</a></li>
+											<li><a href="product_check.php?id=11">Buckwheat Flour</a></li>
 
 										</ul>
 									</div>
-								</div> -->
+								</div>
 							</div>
 						</div>
 					</li>
-					<li><a class="color2" href="sourcing.php">Sourcing</a></li>
+					<li><a class="color2" href="#">Sourcing</a></li>
 					<li><a class="color2" href="#">Feedback</a></li>
 					<li><a class="color2" href="aboutus.php">About Us</a></li>
 					<li><a class="color6" href="contact.php">Contact Us</a></li>
-					<li><a class="color6" href="register.php">Log In</a></li>
+					<li><a class="color6" href="#">Log In</a></li>
 				</ul>
 			</div>
 
