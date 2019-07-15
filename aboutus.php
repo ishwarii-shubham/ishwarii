@@ -54,7 +54,7 @@
 		    <section class="team-section">
 					<div class='about-text' style="background-color:white; color:black;">
 		            <div class="container" style="width:100%;">
-		                <div class="section-title text-center">
+		                <div class="section-title text-center" style="display: block;">
 		                    <h2>Director's Desk</h2>
 		                </div>
 		            </div>

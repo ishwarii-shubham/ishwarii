@@ -2975,7 +2975,7 @@ a.item_add p.number {
 
 .about-text h2{
     font-size: 24px;
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
 }
 
 
@@ -3062,11 +3062,12 @@ a.item_add p.number {
 
 .section-title {
 	font-size: 28px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	padding-bottom: 20px;
 	font-weight: 400;
 	display: inline-block;
 	position: relative;
+	display: block;
 }
 .section-title:after,
 .section-title:before {
@@ -3077,8 +3078,8 @@ a.item_add p.number {
 .section-title:after {
 	height: 2px;
 	background-color: rgba(150, 75, 33, 0.46);
-	left: 25%;
-	right: 25%;
+	left: 35%;
+	right: 35%;
 }
 
 .section-title:before {

@@ -114,7 +114,7 @@
 					<div class="content-top-bottom">
 						<!-- <h2 class="section-title">Our Story</h2> -->
 						<div class="row">
-							<div style="text-align: center;">
+							<div class="container" style="width:100%">
 								<h2 class="section-title">Our Story</h2>
 							</div>
 						</div>
@@ -176,7 +176,7 @@
 								<div class="container text-center">
 									<div class="row">
 										<div class="col-sm-offset-2 col-sm-8">
-											<div>
+											<div class="container" style="width:100%">
 												<h2 class="section-title">What Customer Speaks</h2>
 											</div>
 										</div><!-- /End col -->
