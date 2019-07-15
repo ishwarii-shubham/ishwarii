@@ -30,8 +30,8 @@
                             <div class="slide-text slide_style_left">
 								<h1 data-animation="animated zoomInLeft">ISHWARII</h1>
 								<p data-animation="animated fadeInRight">"Where nature flourishes untouched and unadulterated."</p>
-								<a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">About Us</a>
-								<a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">Sourcing</a>
+								<a href="aboutus.php" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">About Us</a>
+								<a href="products.php" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">All Products</a>
                             </div>
                         </div>
                     </div>
@@ -121,59 +121,59 @@
 						<h1>NEW PRODUCTS</h1>
 						<div class="grid-in">
 							<div class="col-md-3 grid-top simpleCart_shelfItem">
-								<a href="single.php" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/KallaZeera.jpg"
+								<a href="product_check.php?id=1" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images1/dried-apricots.jpeg"
 									alt="">
 									<div class="b-wrapper">
 										<h3 class="b-animate b-from-left    b-delay03 ">
-											<span> KAALA ZEERA  </span>
+											<span>Dried Apricots</span>
 										</h3>
 									</div>
 								</a>
-								<p><a href="single.php">KAALA ZEERA</a></p>
+								<p><a href="product_check.php?id=1">Dried Apricots</a></p>
 								<a href="#" class="item_add">
-									<p class="number item_price"><i> </i>₹500.00</p>
+									<p class="number item_price"><i> </i>₹90.00</p>
 								</a>
 							</div>
 							<div class="col-md-3 grid-top simpleCart_shelfItem">
-								<a href="single.php" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/HimalayanRajma.jpg"
+								<a href="product_check.php?id=11" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images1/Flour.jpeg"
 									alt="">
 									<div class="b-wrapper">
 										<h3 class="b-animate b-from-left    b-delay03 ">
-											<span>HIMALAYAN RAJMA</span>
+											<span>Buckwheat Flour</span>
 										</h3>
 									</div>
 								</a>
-								<p><a href="single.php">HIMALAYAN RAJMA</a></p>
+								<p><a href="product_check.php?id=11">Buckwheat Flour</a></p>
 								<a href="#" class="item_add">
-									<p class="number item_price"><i> </i>₹500.00</p>
+									<p class="number item_price"><i> </i>₹199.00</p>
 								</a>
 							</div>
 							<div class="col-md-3 grid-top simpleCart_shelfItem">
-								<a href="single.php" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/Honey2.jpg"
+								<a href="product_check.php?id=7" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/Honey2.jpg"
 									alt="">
 									<div class="b-wrapper">
 										<h3 class="b-animate b-from-left    b-delay03 ">
-											<span>RED RICE</span>
+											<span>Honey-(White)</span>
 										</h3>
 									</div>
 								</a>
-								<p><a href="single.php">RED RICE</a></p>
+								<p><a href="product_check.php?id=7">Honey-(White)</a></p>
 								<a href="#" class="item_add">
-									<p class="number item_price"><i> </i>₹500.00</p>
+									<p class="number item_price"><i> </i>₹1199.00</p>
 								</a>
 							</div>
 							<div class="col-md-3 grid-top">
-								<a href="single.php" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/Walnut.jpg"
+								<a href="product_check.php?id=5" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images1/pine-nuts.jpeg"
 									alt="">
 									<div class="b-wrapper">
 										<h3 class="b-animate b-from-left    b-delay03 ">
-											<span>WALNUT</span>
+											<span>Pine Nuts</span>
 										</h3>
 									</div>
 								</a>
-								<p><a href="single.php">WALNUT</a></p>
+								<p><a href="single.php">Pine Nuts</a></p>
 								<a href="#" class="item_add">
-									<p class="number item_price"><i> </i>₹500.00</p>
+									<p class="number item_price"><i> </i>₹399.00</p>
 								</a>
 							</div>
 							<div class="clearfix"> </div>
