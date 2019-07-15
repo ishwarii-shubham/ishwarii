@@ -17,9 +17,8 @@
             <!-- Wrapper For Slides -->
             <div class="carousel-inner" role="listbox">
 
-                <!-- Third Slide -->
+                <!-- First Slide -->
                 <div class="item active">
-
                     <!-- Slide Background -->
                     <img src="images1/banner/slide1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
                     <div class="bs-slider-overlay"></div>
@@ -28,10 +27,10 @@
                         <div class="row">
                             <!-- Slide Text Layer -->
                             <div class="slide-text slide_style_left">
-								<h1 data-animation="animated zoomInLeft">ISHWARII</h1>
-								<p data-animation="animated fadeInRight">"Where nature flourishes untouched and unadulterated."</p>
-								<a href="aboutus.php" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">About Us</a>
-								<a href="products.php" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">All Products</a>
+															<h1 data-animation="animated zoomInLeft">ISHWARII</h1>
+															<p data-animation="animated fadeInRight">"Born where nature flourishes untouched and untainted."</p>
+															<a href="aboutus.php" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">About Us</a>
+															<a href="products.php" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">All Products</a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +46,7 @@
                     <!-- Slide Text Layer -->
                     <div class="slide-text slide_style_center">
                         <h1 data-animation="animated flipInX">ISHWARII</h1>
-                        <p data-animation="animated lightSpeedIn">"Everyone in the city has the right to pure food."</p>
+                        <p data-animation="animated lightSpeedIn">"Because everyone in the city has the right to eat pure food."</p>
                         <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">About Us</a>
                         <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">Sourcing</a>
                     </div>
@@ -62,10 +61,30 @@
                     <div class="bs-slider-overlay"></div>
                     <!-- Slide Text Layer -->
                     <div class="slide-text slide_style_right">
-						<h1 data-animation="animated zoomInRight">ISHWARII</h1>
-						<p data-animation="animated fadeInLeft">"You cannot control the air you breath. But you can choose the food you consume."</p>
-						<a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">About Us</a>
-						<a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">Sourcing</a>
+											<h1 data-animation="animated zoomInRight">ISHWARII</h1>
+											<p data-animation="animated fadeInLeft">"Because you cannot control the air you breath but can control the food you consume."</p>
+											<a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">About Us</a>
+											<a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">Sourcing</a>
+                    </div>
+                </div>
+                <!-- End of Slide -->
+
+								<!-- Fourth Slide -->
+                <div class="item active">
+                    <!-- Slide Background -->
+                    <img src="images1/banner/slide1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="bs-slider-overlay"></div>
+
+                    <div class="container">
+                        <div class="row">
+                            <!-- Slide Text Layer -->
+                            <div class="slide-text slide_style_center">
+															<h1 data-animation="animated zoomInLeft">ISHWARII</h1>
+															<p data-animation="animated fadeInRight">"Porthole to an unadulterated and pure world"</p>
+															<a href="aboutus.php" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">About Us</a>
+															<a href="products.php" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">All Products</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- End of Slide -->
@@ -118,7 +137,7 @@
 					</div>
 
 					<div class="content-top">
-						<h1>NEW PRODUCTS</h1>
+						<h1>PRODUCTS</h1>
 						<div class="grid-in">
 							<div class="col-md-3 grid-top simpleCart_shelfItem">
 								<a href="product_check.php?id=1" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images1/dried-apricots.jpeg"
