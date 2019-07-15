@@ -10,8 +10,8 @@ else{
 // CHECKING IF PRODUCT EXISTS
 $pr = get_product_details($id);
 if(empty($pr['price_list'])){
-  header('location: http://ishwarii.com/ishwarii/products.php');
+  header('location: ./products.php');
 }else{
-  header('location: http://ishwarii.com/ishwarii/single.php?id='.$id);
+  header('location: ./single.php?id='.$id);
 }
 ?>
