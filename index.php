@@ -182,7 +182,7 @@
 									<div class="row">
 										<div class="col-sm-offset-2 col-sm-8">
 											<div>
-												<h2 class="section-title">What Clients Say</h2>
+												<h2 class="section-title">What Customer Speaks</h2>
 											</div>
 										</div><!-- /End col -->
 									</div><!-- /End row -->

@@ -103,7 +103,7 @@
 												 <!-- Nav tabs -->
 												 <ul id="tabOne" class="nav nav-tabs nav-justified">
 														 <li class="active"><a href="#contentOne-1" data-toggle="tab" aria-expanded="true">Description</a></li>
-														 <li class=""><a href="#contentOne-2" data-toggle="tab" aria-expanded="false">Benifits</a></li>
+														 <li class=""><a href="#contentOne-2" data-toggle="tab" aria-expanded="false">Nutrition</a></li>
 												 </ul>
 
 												 <!-- Tab panes -->

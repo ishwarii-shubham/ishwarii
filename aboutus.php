@@ -16,7 +16,7 @@
 		        <div class="container" style="padding-right: 15%;">
 		            <div class="row">
 		                <div class="col-md-12">
-		                    <h2 style="margin-bottom:0px;">Who We Are -</h2>
+		                    <!-- <h2 style="margin-bottom:0px;">Who We Are -</h2> -->
 		                    <hr style="color:red;">
 		                </div>
 		            </div>
@@ -38,7 +38,7 @@
 		            </div>
 		            <div class="row" style="padding-top: 10px;">
 		                <div class="col-md-12">
-		                    <h2 style="margin-bottom:0px;">Our Belives -</h2>
+		                    <h2 style="margin-bottom:0px;">Our Beliefs -</h2>
 		                    <hr style="color:red;">
 		                    <p>City has the right to pure food. We source preservative-free, locally-farmed food products directly from the natives of Kinnaur without involving any middlemen.</p>
 												<h4 style="color:#f8dfd2; text-align:center;"><i>"<span style = "color:#964b21;">ISHWARII</span> knows you cannot control the air you breath. But you can choose the food you consume."</i></h4>
