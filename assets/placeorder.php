@@ -1,26 +1,34 @@
 <?php
-$content = $_POST;
-$email_to = 'vpsingh6666@gmail.com';
-$subject = 'Simple Cart Order';
+ob_start();
 
-$email_from = "noreply@ishwarii.com"; // Enter Sender Email
-$sender_name = "Ishwarii"; // Enter Sender Name
-require("./PHPMailerAutoload.php");
-$mail = new PHPMailer();
-$mail->IsSMTP();
-$mail->Host = "mail.ishwarii.com"; // Enter Your Host/Mail Server
+require_once "PHPMailerAutoload.php";
+
+$mail = new PHPMailer;
+// $mail->From = "darshandjey@gmail.com";
+//Enable SMTP debugging.
+$mail->SMTPDebug = 3;
+//Set PHPMailer to use SMTP.
+$mail->isSMTP();
+//Set SMTP host name
+$mail->Host = "sg2plcpnl0095.prod.sin2.secureserver.net";
+//Set this to true if SMTP host requires authentication to send email
 $mail->SMTPAuth = true;
-$mail->Username = "noreply@ishwarii.com"; // Enter Sender Email
+//Provide username and password
+$mail->Username = "noreply@ishwarii.com";
 $mail->Password = "varun@123";
-//If SMTP requires TLS encryption then remove comment from below
-//$mail->SMTPSecure = "tls";
+//If SMTP requires TLS encryption then set it
+$mail->SMTPSecure = "tls";
+//Set TCP port to connect to
 $mail->Port = 587;
-$mail->IsHTML(true);
-$mail->From = $email_from;
-$mail->FromName = $sender_name;
-$mail->Sender = $email_from; // indicates ReturnPath header
-$mail->AddReplyTo($email_from, "No Reply"); // indicates ReplyTo headers
-$mail->Subject = $subject;
+
+$mail->From = "noreply@ishwarii.com";
+$mail->FromName = "Ishwarii";
+
+$mail->addAddress("shubhsinghss@gmail.com", "Recepient Name");
+
+$mail->isHTML(true);
+
+$mail->Subject = "Order Placed";
 $content = $_POST;
 $body = '';
 for($i=1; $i < $content['itemCount'] + 1; $i++) {
@@ -32,22 +40,14 @@ for($i=1; $i < $content['itemCount'] + 1; $i++) {
   $body .= '<br>';
 }
 $mail->Body = $body;
-$mail->AddAddress($email_to);
-// If you know receiver name use following
-//$mail->AddAddress($email_to, "Recepient Name");
-// To send CC remove comment from below
-//$mail->AddCC('username@email.com', "Recepient Name");
-// To send attachment remove comment from below
-//$mail->AddAttachment('files/readme.txt');
-/*
-Please note file must be available on your
-host to be attached with this email.
-*/
+$mail->AltBody = "Something went wrong";
 
-if (!$mail->Send()){
-    echo "Mailer Error: " . $mail->ErrorInfo;
-    }else{
-    echo "<div style='color:#FF0000; font-size:20px; font-weight:bold;'>
-    An email has been sent to your email address.</div>";
+if(!$mail->send())
+{
+    header("Location: ../checkout.php");
+}
+else
+{
+    header("Location: ../success.php");
 }
 ?>
