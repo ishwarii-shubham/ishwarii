@@ -3755,3 +3755,71 @@ Testimonail See All Main components
 .tabOne .tab-pane p:last-of-type {
     margin-bottom: 0;
     }
+
+
+.simpleCart_items {
+	display: inline-block;
+    width: 75%;
+		box-shadow: :0 1px 8px 0 rgba(0, 0, 0, 0.06);
+}
+.cart-total {
+	float: right;
+}
+.headerRow {
+	display: none;
+}
+.item-name{
+	align-self: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.item-id {
+	display: none;
+}
+.item-weight {
+	align-self: center;
+    /* margin-left: 50px; */
+    margin-right: 50px;
+}
+.item-price{
+	align-self: center;
+    margin-right: 50px;
+}
+.item-decrement{
+	align-self: center;
+padding-right: 3px;
+}
+.item-quantity{
+	align-self: center;
+}
+.item-increment{
+	align-self: center;
+    /* margin-right: 50px; */
+    /* margin-left: 50px; */
+    padding-left: 3px;
+}
+.item-total{
+	align-self: center;
+margin-left: 35px;
+}
+.item-remove{
+	align-self: center;
+    margin-left: 18px;
+    background: #964b21;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border: 5px; */
+    border-radius: 5px;
+}
+.simpleCart_remove{
+	color: white;
+}
+
+.itemRow {
+	display: flex;
+	box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+	margin-bottom: 20px;
+}

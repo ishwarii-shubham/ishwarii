@@ -8,9 +8,9 @@ simpleCart({
 	// array representing the format and columns of the cart,
 	// see the cart columns documentation
 	cartColumns: [
+    { attr: "bp", label: false, view: "image"},
 		{ attr: "name", label: "Name"},
     { attr: "id", label: "ID"},
-    { attr: "bp", label: false, view: "image"},
     { attr: "weight", label: "Weight"},
 		{ view: "currency", attr: "price", label: "Price"},
 		{ view: "decrement", label: false, text: "-"},
@@ -22,7 +22,7 @@ simpleCart({
 
 	// "div" or "table" - builds the cart as a
 	// table or collection of divs
-	cartStyle: "table",
+	cartStyle: "div",
 
 	// how simpleCart should checkout, see the
 	// checkout reference for more info
@@ -51,7 +51,7 @@ simpleCart({
 	shippingCustom: null,
 
 	// flat rate shipping option
-	shippingFlatRate: 0,
+	shippingFlatRate: 100,
 
 	// added shipping based on this value
 	// multiplied by the cart quantity
@@ -78,5 +78,5 @@ simpleCart({
 	checkoutSuccess	: null,
 	checkoutFail		: null,
 	beforeCheckout		: null,
-        beforeRemove           : null
+  beforeRemove           : null
 });

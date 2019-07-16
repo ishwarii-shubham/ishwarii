@@ -227,7 +227,9 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$("#item_price_value").html($("#source").val().split(",")[2]);
-				$("#item_weight").html($("#source").val().split(",")[1]);
+				var el = $("#source").val().split(",");
+				var weight = (el[3] == 0) ? el[1].toString()+' Gm' : el[1].toString()+' Kg';
+				$("#item_weight").html(weight);
 				$("#item_price_id").html($("#source").val().split(",")[0]);
 			  $("#source").change(function() {
 			   var el = $(this).val().split(",");
