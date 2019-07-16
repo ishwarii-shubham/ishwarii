@@ -38,7 +38,8 @@
 
 
 						<div class="clearfix"></div>
-						<a class="order" href="#">Place Order</a>
+						<!-- <a class="order" href="#">Place Order</a> -->
+						<button onclick="simpleCart.checkout()" class="place_order">Place Order</button>
 						<div class="total-item">
 							<h3>OPTIONS</h3>
 							<input type="text" placeholder="Enter Coupon" style="width:140px;height: 32px;"> <a class="cpns" href="#" style="text-decoration: none">Apply

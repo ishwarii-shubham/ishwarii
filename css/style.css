@@ -3823,3 +3823,18 @@ margin-left: 35px;
 	box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
 	margin-bottom: 20px;
 }
+
+.place_order{
+		background: #964b21;
+    padding: 10px 20px;
+    font-family: 'Tangerine', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+	}

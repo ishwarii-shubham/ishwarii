@@ -26,10 +26,23 @@ simpleCart({
 
 	// how simpleCart should checkout, see the
 	// checkout reference for more info
-	checkout: {
-		type: "PayPal" ,
-		email: "you@yours.com"
-	},
+  checkout: {
+        type: "SendForm" ,
+        url: "./assets/placeorder.php" ,
+        // http method for form, "POST" or "GET", default is "POST"
+        method: "POST" ,
+        // url to return to on successful checkout, default is null
+        success: "success.php" ,
+        // url to return to on cancelled checkout, default is null
+        cancel: "cancel.php",
+        // an option list of extra name/value pairs that can
+        // be sent along with the checkout data
+        // extra_data: {
+        //   name: "Bob's cool plumbing store",
+        //   id: "12321321",
+        //   quantity:1
+        // }
+  },
 
 	// set the currency, see the currency
 	// reference for more info
