@@ -1,5 +1,6 @@
 <?php
-	require_once('assets/product_class.php');
+	require_once "userSession.php";
+	require_once "product_class.php";
 	$Product = new Product();
 ?>
 <!--header-->
