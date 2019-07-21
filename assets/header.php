@@ -119,7 +119,30 @@
 					<li><a class="color2" href="#">Feedback</a></li>
 					<li><a class="color2" href="aboutus.php">About Us</a></li>
 					<li><a class="color6" href="contact.php">Contact Us</a></li>
-					<li><a class="color6" href="#">Log In</a></li>
+					<?php
+						if(!$_SESSION) {
+							echo '<li><a class="color6" href="login.php">Log In</a></li>';
+						}else {
+							echo '<li>
+											<a class="color6" href="">'.$_SESSION['name'].'</a>
+											<div class="mepanel" style="top: 47px; right: -15px; width:20%; left: unset;">
+												<div class="row">
+													<div class="col1" style="width:100%">
+														<div class="h_nav">
+															<ul>
+																<li><a class="color6" href="?id=-1">Log Out</a></li>
+																<li><a class="color6" href="#">Your Orders</a></li>
+																<li><a class="color6" href="#">Addresses</a></li>
+																<li><a class="color6" href="checkout.php">Cart</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>';
+						}
+					?>
+					<!-- <li><a class="color6" href="#">Log In</a></li> -->
 				</ul>
 			</div>
 

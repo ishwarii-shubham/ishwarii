@@ -41,6 +41,13 @@
     echo $sess->sessionCheck();
   }
 
+  if($_SESSION && array_key_exists('id', $_REQUEST)){
+    if($_REQUEST['id'] == -1){
+      session_unset();
+      session_destroy();
+    }
+  }
+
 // Test();
 
 ?>

@@ -1564,7 +1564,7 @@ a.add-re:hover{
 .register-top-grid span, .register-bottom-grid span {
 	  font-size: 1em;
   display: block;
-  color: #A09F9F;
+  color: #fffbfb;
 }
 .register-top-grid input[type="text"], .register-bottom-grid input[type="password"] {
 	width: 100%;
@@ -3847,15 +3847,6 @@ margin-left: 35px;
 #map {
   height: 100%;
 }
-/* Optional: Makes the sample page fill the window. */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-</style>
-<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-<style>
   #locationField, #controls {
     position: relative;
     width: 480px;

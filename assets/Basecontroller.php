@@ -9,5 +9,9 @@
           $db = new DbConnect;
           $this->dbConn = $db->connect();
       }
+
+      function lastInsertId(){
+        return $this->$dbConn->lastInsertId();
+      }
   }
 ?>
