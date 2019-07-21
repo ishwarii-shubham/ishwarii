@@ -6,6 +6,8 @@
 	<!-- Custom Theme files -->
 	<!--theme-style-->
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- google maps -->
+	<meta name="google-site-verification" content="lkVMS4N5oAbBa16hHobdbrISDX0NPPBVwkGGay2A7P0" />
 	<!--//theme-style-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,4 +36,5 @@
 	<script>$(document).ready(function () { $(".memenu").memenu(); });</script>
 	<script src="js/simpleCart.min.js"> </script>
 	<script src="js/cart.js"> </script>
+	<script src="js/maps.js"> </script>
 </head>

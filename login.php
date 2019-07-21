@@ -33,7 +33,7 @@
 						<!-- <div class="five">
 				<h2>25% </h2><span>discount</span>
 				</div> -->
-						<a href="register.html" class="create">Create an account</a>
+						<a href="register.php" class="create">Create an account</a>
 						<div class="clearfix"> </div>
 					</div>
 					<div class="clearfix"> </div>
@@ -44,4 +44,3 @@
 		<?php include('assets/footer.php'); ?>
 	</body>
 </html>
-	
