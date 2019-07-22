@@ -1,5 +1,6 @@
 
 <?php
+  // require_once 'UserSession.php'
   require_once 'Basecontroller.php';
 
   class User extends BaseController {
@@ -63,6 +64,24 @@
           "message" => "Something Went Wrong",
           "status" => 500
         );
+      }
+    }
+
+    function logIN($user_id, $pass){
+      $query = 'select * from user where username= \''.$user_id.'\' and password = \''.$pass.'\'';
+      $stmt = $this->dbConn->prepare($query);
+      // $stmt->bindParam(":user_id", $user_id);
+      // $stmt->bindParam(":pass", $pass);
+      $stmt->execute();
+      echo $stmt->rowCount();
+      if ($stmt->rowCount() > 0){
+        require_once 'UserSession.php';
+        $sess = new UserSession();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $sess->start($row['id'],$row['username'],$row['name']);
+        header("Location: ./index.php");
+      }else {
+        header("Location: ./login.php?form_action=-2");
       }
     }
 

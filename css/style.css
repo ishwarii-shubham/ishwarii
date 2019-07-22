@@ -772,6 +772,17 @@ ul.social li i:hover{
 	  color:#fff3f3;
 	-webkit-appearance: none;
 }
+.contact-grid input[type="password"],.contact-grid textarea{
+	width: 100%;
+	padding: 1em;
+	margin: 0.5em 0;
+	background:none;
+	outline:none;
+	  border: 1px solid #fff3f3;
+	  font-size:1em;
+	  color:#fff3f3;
+	-webkit-appearance: none;
+}
 .contact-grid textarea{
 	resize:none;
 }
