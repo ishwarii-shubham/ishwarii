@@ -85,6 +85,32 @@
       }
     }
 
+
+    function getAddress($user_id){
+      $query = 'select * from address where user_id= \''.$user_id.'\' and status = 0';
+      $stmt = $this->dbConn->prepare($query);
+      // $stmt->bindParam(":user_id", $user_id);
+      // $stmt->bindParam(":pass", $pass);
+      $stmt->execute();
+      // echo $stmt->rowCount();
+      if ($stmt->rowCount() > 0){
+        while($row=$stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo '<div style="margin-right: 15%;">';
+            if($stmt->rowCount() == 1){
+                echo '<span><input type="checkbox" name="add_id" value='.$row['id'].' checked></span>';
+            }else{
+              echo '<span><input type="checkbox" name="add_id" value='.$row['id'].'></span>';
+            }
+            echo '<span class="total1">'.$row['name'].'</span>';
+            echo '<span>Phone</span><span class="total1">'.$row['phone'].'</span>';
+            echo '<span>Address</span><span class="total1">'.$row['detail'].'</span>';
+            echo '<span>Zipcode</span><span class="total1">'.$row['pin'].'</span>';
+            echo '<span>City</span><span class="total1">'.$row['city'].'</span>';
+            echo '</div>';
+        }
+      }
+    }
+
   }
 
 ?>

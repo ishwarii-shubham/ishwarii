@@ -22,8 +22,14 @@
 					<h1 style="color:black;">My Shopping Bag</h1>
 					<div class="simpleCart_items cart-header"></div>
 					<div class="col-md-3 cart-total">
-						<a class="continue" href="#">Continue to basket</a>
-						<div class="price-details">
+						<a class="continue" href="#">Add Address</a>
+
+						<div class="price-details" style="border-bottom: unset;">
+							<h3>Delivery Address</h3>
+							<?php $user->getAddress($_SESSION['session_id']); ?>
+						</div>
+						<br>
+						<div class="price-details" style="margin-top: 40%;">
 							<h3>Price Details</h3>
 							<span>Total</span>
 							<span class="total1 simpleCart_total"></span>
@@ -41,16 +47,15 @@
 							<div class="clearfix"> </div>
 						</ul>
 
-
 						<div class="clearfix"></div>
 						<!-- <a class="order" href="#">Place Order</a> -->
 						<button onclick="simpleCart.checkout()" class="place_order">Place Order</button>
-						<div class="total-item">
+						<!-- <div class="total-item">
 							<h3>OPTIONS</h3>
 							<input type="text" placeholder="Enter Coupon" style="width:140px;height: 32px;"> <a class="cpns" href="#" style="text-decoration: none">Apply
 								Coupons</a>
 							<p><a href="login.html" style="text-decoration: none">Log In</a> to use accounts - linked coupons</p>
-						</div>
+						</div> -->
 					</div>
 
 					<div class="clearfix"> </div>
