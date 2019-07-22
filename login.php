@@ -1,20 +1,22 @@
 <?php ob_start(); ?>
-<?php
-	if($_REQUEST && array_key_exists('form_action', $_REQUEST) && $_REQUEST['form_action'] > 0) {
-		require_once './assets/user_class.php';
-		$user_id = $_REQUEST['user_name'];
-		$pass = $_REQUEST['pass'];
-		$sess = new User;
-		$cred = $sess->logIN($user_id, $pass);
-		// $aa implode(', ', $cred);
-		echo sizeof($cred);
-	}
-?>
 <!DOCTYPE html>
 <html>
 	<?php include('assets/head.php'); ?>
 	<body>
 		<?php include('assets/header.php'); ?>
+		<?php
+			if ($sess->sessionCheck()){
+				header("Location: ./index.php");
+			}
+
+			if($_REQUEST && array_key_exists('form_action', $_REQUEST) && $_REQUEST['form_action'] > 0) {
+				require_once './assets/user_class.php';
+				$user_id = $_REQUEST['user_name'];
+				$pass = $_REQUEST['pass'];
+				$user = new User();
+				$user->logIN($user_id, $pass, $sess);
+			}
+		?>
 		<!-- grow -->
 		<div class="grow">
 			<div class="container">

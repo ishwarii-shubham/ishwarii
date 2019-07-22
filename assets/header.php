@@ -2,6 +2,7 @@
 	require_once "userSession.php";
 	require_once "product_class.php";
 	$Product = new Product();
+	$sess = new UserSession();
 ?>
 <!--header-->
 <div class="header" style="background-color: #22211f;">

@@ -67,20 +67,20 @@
       }
     }
 
-    function logIN($user_id, $pass){
+    function logIN($user_id, $pass, $sess){
       $query = 'select * from user where username= \''.$user_id.'\' and password = \''.$pass.'\'';
       $stmt = $this->dbConn->prepare($query);
       // $stmt->bindParam(":user_id", $user_id);
       // $stmt->bindParam(":pass", $pass);
       $stmt->execute();
-      echo $stmt->rowCount();
+      // echo $stmt->rowCount();
       if ($stmt->rowCount() > 0){
-        require_once 'UserSession.php';
-        $sess = new UserSession();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $sess->start($row['id'],$row['username'],$row['name']);
+        ob_start();
         header("Location: ./index.php");
       }else {
+        ob_start();
         header("Location: ./login.php?form_action=-2");
       }
     }

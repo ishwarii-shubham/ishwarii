@@ -6,14 +6,10 @@
   class UserSession extends BaseController {
     function sessionCheck() {
       if ($_SESSION){
-            return '<br><a href="#">'.$_SESSION['name'].'</a>';
+            return 1;
             // return $_SESSION;
           } else {
-              if(strpos($_SERVER['PHP_SELF'], 'placeorder.php')){
-                header("Location: ../login.php");
-              } else {
-                return '<br><a href="../login.php">Log In</a>';
-              }
+              return 0;
           }
     }
 
@@ -36,9 +32,10 @@
   function Test(){
     $sess = new UserSession();
     $sess->start('123','user-1','Varun');
-    echo $sess->sessionCheck();
-    echo $sess->end();
-    echo $sess->sessionCheck();
+    $sess = new UserSession();
+    // echo $sess->sessionCheck();
+    // echo $sess->end();
+    // echo $sess->sessionCheck();
   }
 
   if($_SESSION && array_key_exists('id', $_REQUEST)){
