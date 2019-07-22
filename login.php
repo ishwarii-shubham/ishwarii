@@ -32,7 +32,11 @@
 						<form action="?form_action=1" method="post">
 							<div style="color:red;">
 								<?php if($_REQUEST && array_key_exists('form_action', $_REQUEST) && $_REQUEST['form_action'] < 0){
-									echo '<p>Username/Password Is Wrong</p>';
+									if ($_REQUEST['form_action'] > -3){
+											echo '<p>Username/Password Is Wrong</p>';
+									}else {
+										echo '<p>Login/Sign Up to place Order</p>';
+									}
 								}
 								?>
 							</div>

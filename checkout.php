@@ -2,7 +2,12 @@
 <html>
 	<?php include('assets/head.php'); ?>
 <body>
-	<?php include('assets/header.php'); ?>
+	<?php
+		include('assets/header.php');
+		if (!$sess->sessionCheck()){
+			header("Location: ./login.php?form_action=-3");
+		}
+	?>
 	<!-- grow -->
 	<div class="grow">
 		<div class="container">
